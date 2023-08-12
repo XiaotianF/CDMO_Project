@@ -1,4 +1,5 @@
 %This model does not containing with rotation function since the coordinate of each circuit is fixed
+
 include "diffn.mzn";
 include "cumulative.mzn";
 
@@ -53,8 +54,8 @@ solve
 %:: restart_strategy
 %:: int_search(x_pos, input_order, indomain_min)
 %:: int_search(y_pos, input_order, indomain_min);
-:: int_search(x_pos, dom_w_deg, indomain_min)
-:: int_search(x_pos, dom_w_deg, indomain_min)
+%:: int_search(x_pos, dom_w_deg, indomain_min)
+%:: int_search(x_pos, dom_w_deg, indomain_min)
 minimize length;      
                         
 /*********************

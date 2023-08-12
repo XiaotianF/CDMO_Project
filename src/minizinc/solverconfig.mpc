@@ -1,7 +1,8 @@
 {
     "-O": 3,
     "intermediate-solutions": true,
-    "parallel": 9,
+    "output-time": true,
+    "parallel": 15,
     "random-seed": "44",
     "solver": "org.gecode.gecode@6.3.0",
     "time-limit": 300000

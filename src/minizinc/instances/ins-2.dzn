@@ -1,4 +1,4 @@
+width =9;
+n_circuits = 5;
 w_size = [3,3,3,3,3];
 l_size = [3,4,5,6,9];
-n_circuits = 5;
-width =9;

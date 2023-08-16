@@ -46,7 +46,7 @@ def creat_solver(width, n_circuits, w_size, l_size): # Used for setting constrai
         solver.add(y_pos[i] + l_size[i] <= length)
 
 
-    solver.set("Timeout", 30*1000)
+    solver.set("Timeout", 300*1000)
     solver.minimize(length)
 
     # print(solver.help())

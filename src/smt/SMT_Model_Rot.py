@@ -116,7 +116,7 @@ if __name__ == "__main__":
     '''
     directory = r'./instances'
     #    directory = "./instances"  # Replace with the actual directory path
-    selected_files = ["ins-11.txt"]  # Choose the files you want to input
+    selected_files = ["ins-1.txt"]  # Choose the files you want to input
     output_folder = "./out"
 
     if not os.path.exists(output_folder):

@@ -26,7 +26,7 @@ array[N] of var 0..y_len: y_pos;
 var int: length = max([y_pos[i] + l_size[i] | i in N]);
 
 
-%------------------ Constraints --------------------
+%--- Constraints ---
 
 % global constraint 
 constraint diffn(x_pos, y_pos, [w_size[i] | i in N], [l_size[i] | i in N]);
@@ -48,10 +48,8 @@ solve
 %:: int_search(x_pos, dom_w_deg, indomain_min)
 %:: int_search(x_pos, dom_w_deg, indomain_min)
 minimize length;      
-                        
-/*********************
+
 *  output *
-**********************/
         
 output [show(width)++" "++show(length)++"\n"]++
        [show(n_circuits)++"\n"]++

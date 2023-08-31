@@ -4,7 +4,7 @@ include "diffn.mzn";
 include "cumulative.mzn";
 
 
-%Data
+%/*   Data    */
 int: width;    %  the width of silicon the board
 int: n_circuits;    % number of circuits to place
 
@@ -26,7 +26,7 @@ array[N] of var 0..y_len: y_pos;
 var int: length = max([y_pos[i] + l_size[i] | i in N]);
 
 
-%--- Constraints ---
+%/*     Constraints    */
 
 % global constraint 
 constraint diffn(x_pos, y_pos, [w_size[i] | i in N], [l_size[i] | i in N]);
@@ -38,7 +38,7 @@ constraint forall(i in N)(x_pos[i] + w_size[i] <= width);
 
 %constraint forall(i in N)(y_pos[i] + l_size[i] <= length);
 
-% * Search  *
+%/*       Search      */
 %ann : restart_strategy = restart_linear(200);
 
 solve
@@ -49,7 +49,7 @@ solve
 %:: int_search(x_pos, dom_w_deg, indomain_min)
 minimize length;      
 
-*  output *
+%/*        output    */
         
 output [show(width)++" "++show(length)++"\n"]++
        [show(n_circuits)++"\n"]++
